@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline' " footer bar
 Plugin 'flazz/vim-colorschemes' " color schemes
 Plugin 'tpope/vim-fugitive'
+Plugin 'nvie/vim-flake8'
 Plugin 'L9'
 Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'file:///home/gmarik/path/to/plugin'
@@ -63,9 +64,24 @@ augroup no_indent
 augroup END
 
 " Tab Settings
-set expandtab                          " Spaces as tabs
-set shiftwidth=2                       " 2-character tabs
-set softtabstop=2                      " Fix it to 2
+"set expandtab                          " Spaces as tabs
+"set shiftwidth=2                       " 2-character tabs
+"set softtabstop=2                      " Fix it to 2
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set textwidth=80
+set smarttab
+set expandtab
+
 
 " color scheme
-colorscheme molokai
+colorscheme Monokai
+
+" flake8
+autocmd BufWritePost *.py call Flake8()
+let g:flake8_show_in_file=1  " show
+let g:flake8_show_quickfix=1  " show (default)
+
+
