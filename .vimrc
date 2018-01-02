@@ -40,6 +40,7 @@ filetype plugin indent on    " required
 
 set encoding=utf-8
 set showcmd                          
+set number
 
 " Formatting
 set backspace=indent,eol,start         " Expected backspacing
@@ -75,7 +76,6 @@ set textwidth=80
 set smarttab
 set expandtab
 
-
 " color scheme
 colorscheme Monokai
 
@@ -83,5 +83,3 @@ colorscheme Monokai
 autocmd BufWritePost *.py call Flake8()
 let g:flake8_show_in_file=1  " show
 let g:flake8_show_quickfix=1  " show (default)
-
-
