@@ -12,6 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline' " footer bar
 Plugin 'flazz/vim-colorschemes' " color schemes
 Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
 Plugin 'nvie/vim-flake8'
 Plugin 'L9'
 Plugin 'git://git.wincent.com/command-t.git'
@@ -83,3 +84,7 @@ colorscheme Monokai
 autocmd BufWritePost *.py call Flake8()
 let g:flake8_show_in_file=1  " show
 let g:flake8_show_quickfix=1  " show (default)
+
+autocmd vimenter * NERDTree
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
