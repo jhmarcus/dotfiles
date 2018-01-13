@@ -81,10 +81,11 @@ set expandtab
 colorscheme Monokai
 
 " flake8
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
 let g:flake8_show_in_file=1  " show
 let g:flake8_show_quickfix=1  " show (default)
 
 autocmd vimenter * NERDTree
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
